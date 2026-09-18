@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Senai</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simulador Empréstimo - Banco SENAI</h1>
+        <div class="form">
+            <form>
+                <div class="camp">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="namecliente">
+                </div>
+                <div class="camp">
+                    <label for="date">Data de Nascimento:</label>
+                    <input type="date" name="date" id="datebirth">
+                </div>
+                <div class="camp">
+                    <label for="cpf">CPF(11 números):</label>
+                    <input type="text" id="cpfcliente">
+                </div>
+                <div class="camp">
+                    <label for="loan">Valor do Empréstimo(R$):</label>
+                    <input type="number" id="loan">
+                </div>
+                <div class="camp">
+                    <label for="fees">Taxa de Juros Simples(%):</label>
+                    <input type="number" id="fees">
+                </div>
+                <div class="camp">
+                    <label for="installments">Quantidade Parcelas:</label>
+                    <input type="number" id="installments">
+                </div>
+                <button>Calcular Empréstimo</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
