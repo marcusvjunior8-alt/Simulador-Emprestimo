@@ -7,6 +7,7 @@ const fees = document.getElementById('interestRate')
 const installments = document.getElementById('installments')
 let tentativa = 0
 
+// verifica se o usuário atingiu o limite de tentativas
 function tentativas() {
     if (tentativa >= 3) {
         alert('Você atingiu o limite de tentativas, tente novamente mais tarde')
@@ -18,7 +19,7 @@ function tentativas() {
         installments.disabled = true
     }
 }
-/* R2 */
+// R2 validação do nome
 function validatename() {
     if (nameclient.value.length < 5) {
         alert('Nome inválido, digite novamente')
@@ -26,7 +27,7 @@ function validatename() {
         tentativas()
     }
 }
-/* R3 */
+// R3 validação do CPF
 function validatecpf() {
     if (cpf.value.length != 11) {
         alert('CPF inválido, digite novamente')
@@ -34,7 +35,7 @@ function validatecpf() {
         tentativas()
     }
 }
-// R4
+// R4 validação da data de nascimento
 function validatebirth() {
     const birth = new Date(datebirth.value)
     const today = new Date()
@@ -43,7 +44,7 @@ function validatebirth() {
     const formattedAge = age.toFixed(1)
     document.getElementById('age').innerHTML = `Idade: ${formattedAge} anos`
 }
-// R5
+// R5 validação do valor do empréstimo
 function validateloan() {
     if (loan.value <= 0) {
         alert('Valor do empréstimo inválido, digite novamente')
@@ -51,7 +52,7 @@ function validateloan() {
         tentativas()
     }
 }
-// R6
+// R6 validação da taxa de juros
 function validatefees() {
     if (fees.value <= 0){
         alert('Taxa de juros inválida, digite novamente')
@@ -59,7 +60,7 @@ function validatefees() {
         tentativas()
     }
 }
-// R7
+// validação do número de parcelas
 function validateinstallments() {
     if (installments.value <= 0) {
         alert('Número de parcelas inválido, digite novamente')
@@ -67,6 +68,7 @@ function validateinstallments() {
         tentativas()
     }
 }
+// R7 cálculo do empréstimo
 function calculateLoan() {
     const valorEmprestimo = parseFloat(loan.value)
     const taxaJuros = parseFloat(fees.value) / 100
