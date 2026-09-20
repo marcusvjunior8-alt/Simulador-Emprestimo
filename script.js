@@ -54,7 +54,7 @@ function validateloan() {
 }
 // R6 validação da taxa de juros
 function validatefees() {
-    if (fees.value <= 0){
+    if (fees.value <= 0) {
         alert('Taxa de juros inválida, digite novamente')
         tentativa++
         tentativas()
@@ -82,7 +82,7 @@ function calculateLoan() {
     let resultadoHTML = `<h3>Montante Total: R$ ${montanteTotal.toFixed(2)}</h3><ul>`
 
     for (let i = 1; i <= qtdParcelas; i++) {
-        
+
         let dataVencimento = new Date()
 
         dataVencimento.setDate(dataVencimento.getDate() + (30 * i))
@@ -90,11 +90,11 @@ function calculateLoan() {
         const dataFormatada = dataVencimento.toLocaleDateString('pt-BR')
 
         resultadoHTML += `<li>Parcela ${i}: R$ ${valorParcela.toFixed(2)} - Vencimento: ${dataFormatada}</li>`
-}
-resultadoHTML += '</ul>'
+    }
+    resultadoHTML += '</ul>'
 
 
-document.getElementById('resultado').innerHTML = resultadoHTML
+    document.getElementById('resultado').innerHTML = resultadoHTML
 }
 function resetForm() {
     document.getElementById('loanForm').reset()

@@ -91,3 +91,6 @@ button:hover{
 .result-box button{
     background-color: #28a745;
 }
+.result-box button:hover{
+    background-color: #1e7e34;
+}
